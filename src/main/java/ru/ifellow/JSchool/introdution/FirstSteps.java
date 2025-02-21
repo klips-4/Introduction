@@ -71,7 +71,7 @@ public class FirstSteps {
 
     public int max(int[] array) {
         if (array == null || array.length == 0) {
-            return Integer.MAX_VALUE;
+            return Integer.MIN_VALUE;
         }
         int maxVal = array[0];
         for (int i = 1; i < array.length; i++) {
@@ -90,7 +90,7 @@ public class FirstSteps {
         for (int i : array) {
             sum += i;
         }
-        return sum /= array.length;
+        return (double) sum / array.length;
     }
 
     public boolean isSortedDescendant(int[] array) {
@@ -104,7 +104,7 @@ public class FirstSteps {
 
     public void cube(int[] array) {
         for (int i = 0; i < array.length; i++) {
-            System.out.println(Math.pow(array[i], 3));
+            System.out.println((array[i] * array[i] * array[i]));
         }
     }
 
@@ -155,7 +155,7 @@ public class FirstSteps {
         if (matrix == null || matrix.length == 0 || matrix[0].length == 0) {
             return Integer.MIN_VALUE;
         }
-        int max = matrix[0][0];
+        int max = Integer.MIN_VALUE;
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
                 if (matrix[i][j] > max) {
@@ -163,7 +163,7 @@ public class FirstSteps {
                 }
             }
         }
-        ;
+
         return max;
     }
 
