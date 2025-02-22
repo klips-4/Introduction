@@ -2,9 +2,8 @@ package ru.ifellow.JSchool.introdution;
 
 public class Main {
     public static void main(String[] args) {
-        int[] aNums = {};
+        int[] aNums = {1,2,3,0};
         FirstSteps fs = new FirstSteps();
-        int result = fs.max(aNums);
-        System.out.println(result);
+        fs.cube(aNums);
     }
 }

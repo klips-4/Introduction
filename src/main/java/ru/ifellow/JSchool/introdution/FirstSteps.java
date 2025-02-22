@@ -103,8 +103,9 @@ public class FirstSteps {
     }
 
     public void cube(int[] array) {
+        int[] result = new int[array.length];
         for (int i = 0; i < array.length; i++) {
-            System.out.println((array[i] * array[i] * array[i]));
+            result[i] = array[i] * array[i] * array[i];
         }
     }
 
