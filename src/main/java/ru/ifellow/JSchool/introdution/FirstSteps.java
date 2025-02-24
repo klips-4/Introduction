@@ -107,6 +107,7 @@ public class FirstSteps {
         for (int i = 0; i < array.length; i++) {
             result[i] = array[i] * array[i] * array[i];
         }
+        System.out.println(Arrays.toString(result));
     }
 
     public boolean find(int[] array, int value) {
@@ -187,7 +188,7 @@ public class FirstSteps {
     public boolean isSortedDescendant(int[][] matrix) {
         for(int i = 0; i < matrix.length; i++) {
             for(int j=0; j < matrix[i].length-1; j++) {
-                if(matrix[i][j] < matrix[i][j+1]) {
+                if(matrix[i][j] <= matrix[i][j+1]) {
                     return false;
                 }
             }
