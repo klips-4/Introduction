@@ -94,8 +94,11 @@ public class FirstSteps {
     }
 
     public boolean isSortedDescendant(int[] array) {
+        if (array.length == 0) {
+            return true;
+        }
         for (int i = 0; i < array.length - 1; i++) {
-            if (array[i] < array[i + 1]) {
+            if (array[i] <= array[i + 1]) {
                 return false;
             }
         }
@@ -103,11 +106,10 @@ public class FirstSteps {
     }
 
     public void cube(int[] array) {
-        int[] result = new int[array.length];
         for (int i = 0; i < array.length; i++) {
-            result[i] = array[i] * array[i] * array[i];
+            array[i] = (int) Math.pow(array[i], 3);
         }
-        System.out.println(Arrays.toString(result));
+        System.out.println(Arrays.toString(array));
     }
 
     public boolean find(int[] array, int value) {
